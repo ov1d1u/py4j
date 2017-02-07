@@ -1053,11 +1053,11 @@ class GatewayConnection(object):
                 raise Py4JNetworkError("Answer from Java side is empty")
             return answer
         except Exception as e:
-            logger.info("Error while receiving.", exc_info=True)
+            logger.info("Error whil receiving.", exc_info=True)
             print e
             print proto.ERROR_ON_RECEIVE
             raise Py4JNetworkError(
-                "Error while receiving", e, proto.ERROR_ON_RECEIVE)
+                "Error whil receiving", e, proto.ERROR_ON_RECEIVE)
 
 
 class JavaMember(object):
