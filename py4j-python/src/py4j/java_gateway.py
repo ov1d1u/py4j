@@ -1054,6 +1054,8 @@ class GatewayConnection(object):
             return answer
         except Exception as e:
             logger.info("Error while receiving.", exc_info=True)
+            print e
+            print proto.ERROR_ON_RECEIVE
             raise Py4JNetworkError(
                 "Error while receiving", e, proto.ERROR_ON_RECEIVE)
 
